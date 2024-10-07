@@ -24,7 +24,6 @@ export default [
       'react-refresh': reactRefresh,
     },
     rules: {
-      no-unused-vars:false,
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
@@ -32,7 +31,8 @@ export default [
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true ,"no-unused-vars":false, },
+        
       ],
     },
   },
